@@ -1,1 +1,7 @@
 venv
+__pycache__
+.cache
+.coverage
+app.pyc
+.pytest_cache
+__init__.pyc
