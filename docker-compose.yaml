@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  service1-display:
+    container_name: display
+    image: ordecaos/char_gen_display
+    build: ./service1-display
+    ports:
+    - published: 5000
+      target: 5000
+  service2-race:
+    container_name: race
+    image: ordecaos/char_gen_race
+    build: ./service2-race
+  service3-classes:
+    container_name: classes
+    image: ordecaos/char_gen_class
+    build: ./service3-classes
+  service4-name:
+    container_name: name
+    image: ordecaos/char_gen_name
+    build: ./service4-name
