@@ -5,17 +5,25 @@ services:
     image: ordecaos/char_gen_display
     build: ./service1-display
     ports:
-    - published: 5000
+    - published: 80
       target: 5000
+    deploy:
+      replicas: 2
   service2-race:
     container_name: race
     image: ordecaos/char_gen_race
     build: ./service2-race
+    deploy:
+      replicas: 2
   service3-classes:
     container_name: classes
     image: ordecaos/char_gen_class
     build: ./service3-classes
+    deploy:
+      replicas: 2
   service4-name:
     container_name: name
     image: ordecaos/char_gen_name
     build: ./service4-name
+    deploy:
+      replicas: 2
