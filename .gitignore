@@ -5,3 +5,4 @@ __pycache__
 app.pyc
 .pytest_cache
 __init__.pyc
+install-jenkins.sh
