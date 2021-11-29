@@ -7,7 +7,17 @@
     <br>
     <br>
     <body> 
-        You are a {{ race}} you trained as a {{ classes }} and your name is {{ name }} the {{ title }}.
+        You are a {{ race }} you trained as a {{ classes }} and your name is {{ name }} the {{ title }}.
+        <br>
+        <h2>
+            The Last 5 Adventurers
+        </h2>
+        <p>
+            {% for character in last_five_characters %}
+            You are a {{ character.dbrace }} you trained as a {{ character.dbclass }} and your name is {{ character.dbname }} the {{ character.dbtitle }}.
+            <br>
+            {% endfor %}
+        </p>
     </body>
 </html>
 
