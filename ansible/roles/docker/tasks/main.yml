@@ -41,5 +41,4 @@
   pip:
     name:
     - docker
-    -jsondiff
-  executable: pip3
+    executable: pip3

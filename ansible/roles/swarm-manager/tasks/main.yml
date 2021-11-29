@@ -14,4 +14,4 @@
     state: present
     name: dnd_char_gen
     compose:
-      - /home/epica/Week-8---DevOps-Core-Practical/docker-compose.yaml
+      - /home/jenkins/ocker-compose.yaml
