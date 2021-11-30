@@ -2,7 +2,7 @@
 # tasks file for swarm-worker
 
 - name: "Add a Worker to the Swarm"
-  docker-swarm:
+  docker_swarm:
     state: join
     advertise-addr: dnd-char-gen-worker
     join_token: "{{ hostvars['dnd-char-gen-manager']['swarm_info']['swarm_facts']['JoinTokens']['Worker'] }}"
