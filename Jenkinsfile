@@ -7,7 +7,7 @@ pipeline {
             }
         }
         stage ('Build and Push Images') {
-            enviroment {
+            environment {
                 DOCKER_UNAME = credentials('docker_uname')
                 DOCKER_PWORD = credentials('docker_pword')
             }
