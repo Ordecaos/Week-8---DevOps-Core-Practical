@@ -17,14 +17,10 @@ pipeline {
                 sh "docker-compose push"               
             }
         }
-        stage ("Manage Configuration") {
+        stage ("Manage Configuration & Deploy") {
             steps{
                 sh "ansible-playbook -i ansible/inventory.yaml ansible/playbook.yaml"
-            }
-        }
-        stage('Deploy') {
-            steps {
-                sh "scp -i ~/.ssh/id_rsa docker-compose.yaml dnd-char-gen-manager:/home/jenkins/docker-compose.yaml"
+                 sh "scp -i ~/.ssh/id_rsa docker-compose.yaml dnd-char-gen-manager:/home/jenkins/docker-compose.yaml"
             }
         }
     }
