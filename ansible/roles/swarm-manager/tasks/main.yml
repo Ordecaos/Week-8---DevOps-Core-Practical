@@ -14,4 +14,4 @@
     state: present
     name: dnd_char_gen
     compose:
-      - /home/jenkins/ocker-compose.yaml
+      - /home/jenkins/docker-compose.yaml
