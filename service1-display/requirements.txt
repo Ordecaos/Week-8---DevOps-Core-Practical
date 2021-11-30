@@ -1,5 +1,5 @@
 flask
 flask_sqlalchemy
-SQLAlchemy
+sqlalchemy
 pymysql
 requests
