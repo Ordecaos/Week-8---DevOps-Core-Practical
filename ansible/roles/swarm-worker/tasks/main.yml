@@ -4,6 +4,6 @@
 - name: "Add a Worker to the Swarm"
   docker_swarm:
     state: join
-    advertise-addr: dnd-char-gen-worker
+    advertise_addr: dnd-char-gen-worker
     join_token: "{{ hostvars['dnd-char-gen-manager']['swarm_info']['swarm_facts']['JoinTokens']['Worker'] }}"
     remote_addrs: [ 'dnd-char-gen-manager:2377' ]
