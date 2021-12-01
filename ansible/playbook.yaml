@@ -8,7 +8,7 @@
   roles:
   - docker
   - swarm-worker
-- hosts: nginx
+- hosts: load-balancer
   become: true
   roles:
   - nginx
