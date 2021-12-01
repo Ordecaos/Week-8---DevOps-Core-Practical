@@ -14,7 +14,7 @@
 
 - name: "Copy NGINX.conf to NGINX"
   copy:
-    scr: nginx.conf
+    src: nginx.conf
     dest: /etc/nginx/nginx.conf
 
 - name: "Restarting NGINX"
