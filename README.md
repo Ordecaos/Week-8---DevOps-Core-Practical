@@ -59,12 +59,22 @@ The following Screenshots display the application in action:
 
 The Pipeline for this project is as follows:
 
+* **Project Tracking:** This project was tracked using Jira. User Stories were assigned based on how difficult this participant felt these individual User Stories were to complete. This Jira board can be found [here](https://ordecaos.atlassian.net/jira/software/projects/DCP/boards/5)
 
+* **Version Control:** Git was used as the version control system for this project, with the repository being Github and can be found [here](https://github.com/Ordecaos/Week-8---DevOps-Core-Practical)
+
+* **Development Environment:** The Deveopment Environment for this project was a Ubuntu 21.10 Virutal Machine what was hosted on GCP and was edited using Visual Studio Code for an easy, more convenient way of coding this project.
+
+* **CI Server:** Jenkins was used as the CI server for this project. Using a webhook from Github, Jenkins will clone down the repository and execute a pipeline script within the Jenkinsfile. The Jenkins file itself first tests the application to ensure it runs correctly with full functionality, then builds the application as well as pushing the various images up to Dockerhub. Finally the deploy section deploys the application to the various Virutal Machines, including an NGINX Load Balancer, a Docker Swarm Manager and a Docker Swarm Worker. If this all works correctly then the application deploys and can be viewed through the load balancer.
 
 ## Known Issues
+
+Due to SQLite database being used, data is not persisted between the services. In the future, this would be resolved by using a persistant database on GCP.
 
 ## Future Development
 
 If this project were to be taken up in the future, an obvious expansion would be to input a greater variety of Dungeons and Dragons Races, Classes, Names and Titles in order to have a more fleshed out generator, additionally generating gold, statistics and starting equipment would be a wonderful addition.
 
 ## What would be done differently?
+
+Given this participants skills and ability at this point of their career, They believe that this is the best project that they could produce in the given time for this project.
