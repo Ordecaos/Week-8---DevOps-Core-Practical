@@ -46,7 +46,3 @@ class TestResponse(TestBase):
             m.post('http://service4-name:5000/char/title', text='Brave')
             response = self.client.get(url_for('generator'))
             self.assertIn(b'You are a Human you trained as a Fighter and your name is Om the Brave.', response.data)
-
-    def test_last_five(self):
-        response = self.client.get(url_for('generator'))
-        self.assertIn(b'You are a Human you trained as a Fighter and your name is Om the Brave.', response.data)
