@@ -5,7 +5,7 @@ services:
     image: ordecaos/char_gen_display
     build: ./service1-display
     ports:
-    - published: 5000
+    - published: 80
       target: 5000
     deploy:
       replicas: 2
