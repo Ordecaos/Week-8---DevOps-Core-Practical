@@ -23,5 +23,13 @@ pipeline {
                 sh "ansible-playbook -i ansible/inventory.yaml ansible/playbook.yaml"
             }
         }
+    post {
+        always {
+            junit '**/*.xml'
+            cobertura coberturaReportFile: 'service1-display/coverage.xml', failNoReports: false
+            cobertura coberturaReportFile: 'service2-race/coverage.xml', failNoReports: false
+            cobertura coberturaReportFile: 'service3-classes/coverage.xml', failNoReports: false
+            cobertura coberturaReportFile: 'service4-name/coverage.xml', failNoReports: false
+        }
     }
 }
