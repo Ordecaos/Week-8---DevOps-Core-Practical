@@ -4,6 +4,8 @@ services:
     container_name: display
     image: ordecaos/char_gen_display
     build: ./service1-display
+    environment:
+      SECRETKEY: ${secretkey}
     ports:
     - published: 80
       target: 5000
