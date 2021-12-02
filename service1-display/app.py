@@ -1,16 +1,18 @@
+#The various imports needed for this service to run, this incldes flask, SQLalchemy and requests.
 from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import desc
-from flask_wtf import FlaskForm
-from wtforms import IntegerField, StringField, SelectField, SubmitField
 import requests
 
 app = Flask(__name__)
+
+#The SQL set up
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///char.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 
+#The table used to store up to 5 of the latest characters generated
 class Characters(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     dbrace = db.Column(db.String(225), nullable=False)
@@ -18,11 +20,12 @@ class Characters(db.Model):
     dbname = db.Column(db.String(225), nullable=False)
     dbtitle = db.Column(db.String(225), nullable=False)
 
-
+#This is the route for the homepage
 @app.route('/')
 def home():
      return render_template('index.html')
 
+#This is the route for the generator as well as displaying the 5 last generated names and titles
 @app.route('/generator', methods=['GET'])
 def generator():
     race = requests.get('http://service2-race:5000/char/races')
