@@ -1,8 +1,10 @@
+#The various imports needed for this service to run including random from Python3
 from flask import Flask, Response, request
 import random
 
 app = Flask(__name__)
 
+#This route takes information from service 2 and further generates information from that, choosing a from a list of 3 names per race
 @app.route('/char/name', methods=['POST'])
 def names():
     race = request.data.decode('utf-8')
@@ -17,6 +19,7 @@ def names():
         name = random.choice(dragonborn_list)
     return Response(name, mimetype='text/plain')
 
+#This route takes information from service 3 and generates a title based on the class generated
 @app.route('/char/title', methods=['POST'])
 def titles():
     classes = request.data.decode('utf-8')

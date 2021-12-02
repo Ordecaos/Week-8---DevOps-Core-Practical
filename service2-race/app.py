@@ -1,8 +1,10 @@
+#The various imports needed for this service to run including random from Python3
 from flask import Flask, Response, request
 import random
 
 app = Flask(__name__)
 
+#The Route that generates a random D&D race from a set list
 @app.route('/char/races', methods=['GET'])
 def races():
     race_list = ['Human', 'Elf', 'Dragonborn']
