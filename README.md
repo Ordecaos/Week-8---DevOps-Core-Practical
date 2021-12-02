@@ -69,6 +69,16 @@ The following Screenshots display the application in action:
 
 ![generator_with_list](https://github.com/Ordecaos/Week-8---DevOps-Core-Practical/blob/main/Images/Generator%20with%20saved%20items.png?raw=true)
 
+This application is fully tested with 90% or more coverage on each portion of the application, with a every instance of untested code being the actual running of the application, which cannot be properly tested without the app itself running. The following images are results of those tests:
+
+![System_1_test](https://github.com/Ordecaos/Week-8---DevOps-Core-Practical/blob/main/Images/Service1-Test%20Coverage.png?raw=true)
+
+![System_2_test](https://github.com/Ordecaos/Week-8---DevOps-Core-Practical/blob/main/Images/Service2-Test%20Coverage.png?raw=true)
+
+![System_3_test](https://github.com/Ordecaos/Week-8---DevOps-Core-Practical/blob/main/Images/Service3-Test%20Coverage.png?raw=true)
+
+![System_4_test](https://github.com/Ordecaos/Week-8---DevOps-Core-Practical/blob/main/Images/Service4-Test%20Coverage.png?raw=true)
+
 ## Pipeline
 
 The Pipeline for this project is as follows:
