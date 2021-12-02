@@ -89,7 +89,7 @@ Due to SQLite database being used, data is not persisted between the services. I
 
 ## Future Development
 
-If this project were to be taken up in the future, an obvious expansion would be to input a greater variety of Dungeons and Dragons Races, Classes, Names and Titles in order to have a more fleshed out generator, additionally generating gold, statistics and starting equipment would be a wonderful addition. Additionally, having CRUD functionality would provide a strong 
+If this project were to be taken up in the future, an obvious expansion would be to input a greater variety of Dungeons and Dragons Races, Classes, Names and Titles in order to have a more fleshed out generator, additionally generating gold, statistics and starting equipment would be a wonderful addition. Additionally, having CRUD functionality would provide a strong feature for this project.
 
 ## What would be done differently?
 
