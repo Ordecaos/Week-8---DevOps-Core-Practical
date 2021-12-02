@@ -8,6 +8,7 @@ import requests
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///char.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SECRET_KEY'] = ""
 
 db = SQLAlchemy(app)
 
@@ -34,6 +35,15 @@ class Add_Player(FlaskForm):
     Character_Class = SelectField("Character Class", choices=[('Artificer', 'artificer'), ('Barbarian', 'barbarian'), ('Bard', 'bard'), ('Blood Hunter', 'blood hunter'), ('Cleric', 'cleric'), ('Druid', 'druid'), ('Fighter', 'fighter'), ('Monk', 'monk'), ('Paladin', 'paladin'), ('Ranger', 'ranger'), ('Rogue', 'rogue'), ('Sorcerer', 'sorcerer'), ('Warlock', 'warlock'), ('Wizard', 'wizard')])
     Character_Race = StringField("Character Race")
     submit = SubmitField("Add Player")
+
+class Update_Player(FlaskForm):
+
+    Player_name = StringField("Your Name")
+    Character_Name = StringField("Character Name")
+    Character_Level = SelectField("Character Level", choices=[(1), (2), (3), (4), (5), (6), (7), (8), (9), (10), (11), (12), (13), (14), (15), (16), (17), (18), (19), (20)])
+    Character_Class = SelectField("Character Class", choices=[('Artificer', 'artificer'), ('Barbarian', 'barbarian'), ('Bard', 'bard'), ('Blood Hunter', 'blood hunter'), ('Cleric', 'cleric'), ('Druid', 'druid'), ('Fighter', 'fighter'), ('Monk', 'monk'), ('Paladin', 'paladin'), ('Ranger', 'ranger'), ('Rogue', 'rogue'), ('Sorcerer', 'sorcerer'), ('Warlock', 'warlock'), ('Wizard', 'wizard')])
+    Character_Race = StringField("Character Race")
+    submit = SubmitField("Update Player")
 
 @app.route('/')
 def home():
