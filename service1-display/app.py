@@ -88,7 +88,7 @@ def Add_Players():
         Character_Level=form.Character_Level.data
         Character_Class=form.Character_Class.data
         Character_Race=form.Character_Race.data
-        NewPlayer = PlayersTable(Player_name=Name, Character_Name=Character_Name, Character_Level=Character_Level, Character_Class=Character_Class, Character_Race=Character_Race, Campaign_In=Campaign_In)
+        NewPlayer = PlayersTable(Player_name=Name, Character_Name=Character_Name, Character_Level=Character_Level, Character_Class=Character_Class, Character_Race=Character_Race)
         db.session.add(NewPlayer)
         db.session.commit()
         return redirect("/Players")
