@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment{
+        SECRETKEY = credentials('secretkey')
+    }
     stages{
         stage('Run Tests') {
             steps{
