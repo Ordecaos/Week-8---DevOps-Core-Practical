@@ -6,3 +6,4 @@ app.pyc
 .pytest_cache
 __init__.pyc
 install-jenkins.sh
+test.db
