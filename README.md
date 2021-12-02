@@ -19,6 +19,10 @@ This project, provided by the QA academy, was to create an application of four m
 
 While in the planning stages of this project, this participant developed the following risk assessment:
 
+![Risk Assessment](https://github.com/Ordecaos/Week-8---DevOps-Core-Practical/blob/main/Images/Risk%20Assessment.png?raw=true)
+
+As Users don't need to submit any information for this application, the main focus were operational and perosnal risks, as seen with the above images.
+
 ## Technical Design
 
 A variety of technologies were used in order to fully document and complete this project. These technologies and their rationale will be listed now.
@@ -53,7 +57,17 @@ In keeping with the project brief, this application has 4 services:
 
 * **service4-name:** This service recieves an HTTP POST request from service 1 and will randomly generate a name and a title based on the race and class respectivly from distincty lists.
 
+The Services are interconnected with this, along with an NGINX load balancer:
+
+![archetecture](https://github.com/Ordecaos/Week-8---DevOps-Core-Practical/blob/main/Images/architecture.png?raw=true)
+
 The following Screenshots display the application in action: 
+
+![homepage](https://github.com/Ordecaos/Week-8---DevOps-Core-Practical/blob/main/Images/Home%20Page.png?raw=true)
+
+![generator](https://github.com/Ordecaos/Week-8---DevOps-Core-Practical/blob/main/Images/Generator.png?raw=true)
+
+![generator_with_list](https://github.com/Ordecaos/Week-8---DevOps-Core-Practical/blob/main/Images/Generator%20with%20saved%20items.png?raw=true)
 
 ## Pipeline
 
@@ -65,7 +79,9 @@ The Pipeline for this project is as follows:
 
 * **Development Environment:** The Deveopment Environment for this project was a Ubuntu 21.10 Virutal Machine what was hosted on GCP and was edited using Visual Studio Code for an easy, more convenient way of coding this project.
 
-* **CI Server:** Jenkins was used as the CI server for this project. Using a webhook from Github, Jenkins will clone down the repository and execute a pipeline script within the Jenkinsfile. The Jenkins file itself first tests the application to ensure it runs correctly with full functionality, then builds the application as well as pushing the various images up to Dockerhub. Finally the deploy section deploys the application to the various Virutal Machines, including an NGINX Load Balancer, a Docker Swarm Manager and a Docker Swarm Worker. If this all works correctly then the application deploys and can be viewed through the load balancer.
+* **CI Server:** Jenkins was used as the CI server for this project. Using a webhook from Github, Jenkins will clone down the repository and execute a pipeline script within the Jenkinsfile. The Jenkins file itself first tests the application to ensure it runs correctly with full functionality, then builds the application as well as pushing the various images up to Dockerhub. Finally the deploy section deploys the application to the various Virutal Machines, including an NGINX Load Balancer, a Docker Swarm Manager and a Docker Swarm Worker. If this all works correctly then the application deploys and can be viewed through the load balancer. Here is an image of Jenkins having a sucessful build: 
+
+![Jenkins](https://github.com/Ordecaos/Week-8---DevOps-Core-Practical/blob/main/Images/Jenkins%20Build.png?raw=true)
 
 ## Known Issues
 
@@ -73,7 +89,7 @@ Due to SQLite database being used, data is not persisted between the services. I
 
 ## Future Development
 
-If this project were to be taken up in the future, an obvious expansion would be to input a greater variety of Dungeons and Dragons Races, Classes, Names and Titles in order to have a more fleshed out generator, additionally generating gold, statistics and starting equipment would be a wonderful addition.
+If this project were to be taken up in the future, an obvious expansion would be to input a greater variety of Dungeons and Dragons Races, Classes, Names and Titles in order to have a more fleshed out generator, additionally generating gold, statistics and starting equipment would be a wonderful addition. Additionally, having CRUD functionality would provide a strong 
 
 ## What would be done differently?
 
