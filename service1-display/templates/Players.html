@@ -1,0 +1,31 @@
+<html>
+    <centre><h2> Players Tables</h2>
+        <a href="{{ url_for('home') }}" > Back to Home </a>
+        <br>
+        <br>
+        <br>
+        <a href="{{ url_for('Add_Players') }}"> New Player </a> 
+        <table>
+            <tr>
+                <td> Player Name </td>
+                <td> Character Name </td>
+                <td> Character Level </td>
+                <td> Character Class </td>
+                <td> Operations </td>
+            </tr>
+
+        {% for record in records %}
+
+            <tr>
+                <td><a href="{{ url_for('Player_Info', Player_ID = record.Player_ID)}} ">{{ record.Player_name }}</a> </td>
+                <td>{{ record.Character_Name }}</td>
+                <td>{{ record.Character_Level }}</td>
+                <td>{{ record.Character_Class }}</td>
+                <td><a href="{{ url_for('Edit_Player', Player_ID = record.Player_ID)}} "> Edit </a> <a href="{{ url_for('Delete_Player', Player_ID = record.Player_ID)}} "> Delete</a></td>
+            </tr>
+
+        {% endfor %}
+        </table>
+        
+    </centre>
+</html>
